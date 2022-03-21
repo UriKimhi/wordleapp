@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       <h1 className="Title">Wordle</h1> 
       <Keyboard />
+      
     </div>
   );
 }
