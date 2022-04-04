@@ -1,13 +1,12 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Keyboard from "./componenets/keyboard";
+import Grid from "./Grid";
 
 function App() {
   return (
     <div className="App">
-      <h1 className="Title">Wordle</h1> 
-      <Keyboard />
-      
+      <h1 className="Title">Wordle</h1>     
+      <Grid />
     </div>
   );
 }

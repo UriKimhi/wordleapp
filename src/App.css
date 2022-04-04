@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #282c34;
+  background-color: #080b0e;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -19,11 +19,17 @@
 .gamekeyboard {
   margin-top: 50px;
   width: 800px;
- 
-}
-.CubeLocation{
-  display: flex;
+  justify-content: space-around;
+  padding-bottom: 150px;
   align-items: center;
-  justify-content: space-between;
-  padding-top: 50px;
+}
+#CubeLocation{
+  margin-bottom: 100px;
+
+}
+.active {
+  background-color: green !important;
+}
+.notInPlace {
+  background-color: yellow !important;
 }
