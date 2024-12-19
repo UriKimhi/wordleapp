@@ -18,7 +18,7 @@ const Title = styled.h1`
   padding: 0.5em 1em;
 `;
 const Cubes = forwardRef((props, ref) => {
-  const mainWord = ["R", "E", "A", "C", "R"];
+  const mainWord = ["C", "L", "O", "U", "D"];
   useImperativeHandle(ref, () => ({
     onEnter(row) {
       for (let j = 0; j < 5; j++) {
@@ -26,8 +26,8 @@ const Cubes = forwardRef((props, ref) => {
         if (currentLetter === mainWord[j]) {
           props.arr[row][j].isCorrect = true;
         } else if (mainWord.includes(currentLetter)) {
-          let countOfSameWord = mainWord.filter(word=> word===currentLetter);
-          console.log(mainWord.filter(word=> word===currentLetter).length);
+          let countOfSameWord = mainWord.filter((word) => word === currentLetter);
+          console.log(mainWord.filter((word) => word === currentLetter).length);
           props.arr[row][j].notInPlace = true;
         }
       }
@@ -43,13 +43,7 @@ const Cubes = forwardRef((props, ref) => {
                 <Cube
                   key={index}
                   data-key={cube.letter}
-                  className={
-                    cube.isCorrect
-                      ? "active"
-                      : cube.notInPlace
-                      ? "notInPlace"
-                      : ""
-                  }
+                  className={cube.isCorrect ? "active" : cube.notInPlace ? "notInPlace" : ""}
                 >
                   <Title>{cube.letter.toUpperCase()}</Title>
                 </Cube>
